@@ -1,0 +1,9 @@
+-> library github request
+-> https://developer.mozilla.org/th/docs/Web/HTTP/Status
+
+-> npm i -D locus@2.0.0
+locus is a debugging tool 
+if it is not work for window use pryjs -> https://www.npmjs.com/package/pryjs
+
+restructure.js
+- npm i request-promise
