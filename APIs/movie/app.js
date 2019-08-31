@@ -22,13 +22,7 @@ app.get("/results", (req, res)=>{
 			const parsedData = JSON.parse(body)
 			
 			//filter when there is no data for searching
-			console.log(typeof parsedData["Response"]);
-			if(parsedData["Response"] === "True"){
 				res.render("results", {data : parsedData});
-			}else if(parsedData["Response"] === "False"){
-				res.render("search");
-			}
-			
 			//res.send(parsedData["Search"][0]["Title"]);
 			//res.send(`${parsedData.Search.0.title}`);   .0 how tooooo ?????
 			//console.log(`${parsedData.name} + hi`);
