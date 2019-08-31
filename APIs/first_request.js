@@ -1,6 +1,5 @@
 
 var request = require('request');
-
 request('https://my-json-server.typicode.com/typicode/demo/comments', function(err, response, body){
 		if(!err && response.statusCode == 200){
 			var parsedData = JSON.parse(body)

@@ -1,0 +1,17 @@
+<h1>
+	result
+</h1>
+<form action="/results" method="GET">
+	<input type="text" placeholder="search movie" name ="search">
+	<!-- name(we call query string) = search will appear in tab browser -->
+	<input type="submit">
+</form>
+
+<ul>
+	<% data["Search"].forEach(function(movie){%>
+		<li><strong><%=	movie["Title"]%></strong> 
+		- <%=movie["Year"]%></li>					 
+	<%	}); %>
+</ul>
+
+<a href="/">Back to home</a>
