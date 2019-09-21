@@ -19,19 +19,19 @@ app.get("/results", (req, res)=>{
 	var url = `http://omdbapi.com/?s=${query}&apikey=thewdb`;
 	request(url, (err, response, body) => {
 		if(!err && response.statusCode == 200){
-			const parsedData = JSON.parse(body)
-			
+			const parsedData = JSON.parse(body);
+			//console.log(`${parsedData.Search[0].Title}`); //OK this format is work
 			//filter when there is no data for searching
-				res.render("results", {data : parsedData});
-			//res.send(parsedData["Search"][0]["Title"]);
-			//res.send(`${parsedData.Search.0.title}`);   .0 how tooooo ?????
+			res.render("results", {data : parsedData});
+			
+			//res.send(`${parsedData.Search.title}`);   
 			//console.log(`${parsedData.name} + hi`);
 			
 			//using ejs in views by passing data that is parsedData
 			
 			
 		}else{
-			console.log("sad");
+			console.log("Error");
 		}
 	});
 });
